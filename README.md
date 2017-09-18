@@ -43,6 +43,7 @@ $ git push origin master # Залить все изменения ветки mas
 *build*/
 *install*/
 *.swp
+# Сделано https://github.com/poljkee2010/lab03
 ```
 
 ```ShellSession
@@ -124,9 +125,9 @@ $ git push origin master # Залить все изменения ветки mas
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/  # Переход в директорию /labs
+$ cd ~/workspace/labs/  # Переходим в /workspace/labs/
 $ export LAB_NUMBER=03 # # Устанавливаем значение переменной окружения LAB_NUMBER
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Клонирование репозитория
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Клонирование репозитория с лабой
 $ mkdir reports/lab${LAB_NUMBER} # Создаем каталог lab${LAB_NUMBER}
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем README.md в REPORT.md
 $ cd reports/lab${LAB_NUMBER} # Меняем директорию на reports/lab${LAB_NUMBER}
