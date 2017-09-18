@@ -22,18 +22,18 @@ $ alias edit=subl # Выбираем текстовый редактор
 ```
 
 ```ShellSession
-$ mkdir lab03 && cd lab03
-$ git init
-$ git config --global user.name ${GITHUB_USERNAME}
-$ git config --global user.email ${GITHUB_EMAIL}
-$ git config -e --global
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
-$ git pull origin master
-$ touch README.md
-$ git status
-$ git add README.md
-$ git commit -m"added README.md"
-$ git push origin master
+$ mkdir lab03 && cd lab03 # Создаём директорию и переходим в неё
+$ git init # Создаём репозиторий в существующей директории
+$ git config --global user.name ${GITHUB_USERNAME} # git config которая позволяет просматривать и устанавливать параметры, контролирующие все аспекты работы; опция --global даёт возможность настроить всего лишь один раз
+$ git config --global user.email ${GITHUB_EMAIL} # Указываем имя пользователя и email
+$ git config -e --global # Включить поддержку вывода Escape последовательностей;
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03  # Загрузка удаленного репозитория lab03 
+$ git pull origin master # Залить все измениня ветки с удаленного репозитория в ветку master
+$ touch README.md # Создать файл в текущей директории
+$ git status # Текущее состояние репозитория (изменения, неразрешенные конфликты и тп):
+$ git add README.md # Добавляем новый файл под контроль,чтобы в дальнейшем отслеживать его изменения 
+$ git commit -m"added README.md" # Выполняем commit файла и добавляем комментарий к коммиту
+$ git push origin master # Залить все изменения ветки master с локального на удаленный репозиторий
 ```
 
 Добавить на сервисе **GitHub** в репозитории **lab03** файл **.gitignore**
