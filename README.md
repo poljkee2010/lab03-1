@@ -30,7 +30,7 @@ $ git config -e --global # Включить поддержку вывода Esca
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03  # Загрузка удаленного репозитория lab03 
 $ git pull origin master # Выгрузить изменения всех веток с удаленного репозитория в ветку master
 $ touch README.md # Создать файл в текущей директории
-$ git status # Текущее состояние репозитория (изменения, неразрешенные конфликты и тп):
+$ git status # Текущее состояние репозитория (изменения, неразрешенные конфликты)
 $ git add README.md # Добавляем новый файл под контроль,чтобы в дальнейшем отслеживать его изменения 
 $ git commit -m"added README.md" # Выполняем commit файла и добавляем комментарий к коммиту
 $ git push origin master # Залить все изменения ветки master с локального на удаленный репозиторий
@@ -51,10 +51,10 @@ $ git log # История изменений
 ```
 
 ```ShellSession
-$ mkdir sources
+$ mkdir sources # Создание директорий
 $ mkdir include
 $ mkdir examples
-$ cat > sources/print.cpp <<EOF
+$ cat > sources/print.cpp <<EOF # Запись в .cpp файл участка кода
 #include <print.hpp>
 
 void print(const std::string& text, std::ostream& out) {
@@ -64,32 +64,32 @@ void print(const std::string& text, std::ostream& out) {
 void print(const std::string& text, std::ofstream& out) {
   out << text;
 }
-EOF
+EOF # end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
-$ cat > include/print.hpp <<EOF
+$ cat > include/print.hpp <<EOF # Запись в .cpp файл участка кода
 #include <string>
 #include <fstream>
 #include <iostream>
 
 void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
-EOF
+EOF   # end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
-$ cat > examples/example1.cpp <<EOF
+$ cat > examples/example1.cpp <<EOF # Запись в .cpp файл участка кода
 #include <print.hpp>
 
 int main(int argc, char** argv) {
   print("hello");
 }
-EOF
+EOF # end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
-$ cat > examples/example2.cpp <<EOF
+$ cat > examples/example2.cpp <<EOF # Запись в .cpp файл участка кода
 #include <fstream>
 #include <print.hpp>
 
@@ -97,18 +97,18 @@ int main(int argc, char** argv) {
   std::ofstream file("log.txt");
   print(std::string("hello"), file);
 }
-EOF
+EOF # end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
-$ edit README.md
+$ edit README.md # Редактировать файл
 ```
 
 ```ShellSession
-$ git status
-$ git add .
-$ git commit -m"added sources"
-$ git push origin master
+$ git status # Текущее состояние репозитория
+$ git add . # Обработка содержимого текущей директории
+$ git commit -m"added sources" # Выполняем commit файла и добавляем комментарий к коммиту
+$ git push origin master # Залить все изменения ветки master с локального на удаленный репозиторий
 ```
 
 ## Report
