@@ -28,7 +28,7 @@ $ git config --global user.name ${GITHUB_USERNAME} # git config позволяе
 $ git config --global user.email ${GITHUB_EMAIL} # Указываем имя пользователя и email
 $ git config -e --global # Включить поддержку вывода Escape последовательностей;
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03  # Загрузка удаленного репозитория lab03 
-$ git pull origin master # Залить все измениня ветки с удаленного репозитория в ветку master
+$ git pull origin master # Выгрузить изменения всех веток с удаленного репозитория в ветку master
 $ touch README.md # Создать файл в текущей директории
 $ git status # Текущее состояние репозитория (изменения, неразрешенные конфликты и тп):
 $ git add README.md # Добавляем новый файл под контроль,чтобы в дальнейшем отслеживать его изменения 
@@ -46,8 +46,8 @@ $ git push origin master # Залить все изменения ветки mas
 ```
 
 ```ShellSession
-$ git pull origin master
-$ git log
+$ git pull origin master # Выгрузить изменения всех веток с удаленного репозитория в ветку master
+$ git log # История изменений
 ```
 
 ```ShellSession
