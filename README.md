@@ -54,7 +54,8 @@ $ git log # История изменений
 $ mkdir sources # Создание директорий
 $ mkdir include
 $ mkdir examples
- # Запись в .cpp файл участка кода
+
+# Запись в .cpp файл участка кода
 $ cat > sources/print.cpp <<EOF
 #include <print.hpp>
 
@@ -66,6 +67,7 @@ void print(const std::string& text, std::ofstream& out) {
   out << text;
 }
 EOF 
+
 # end of file — конец файла,переход на новый строку
 ```
 
@@ -78,7 +80,8 @@ $ cat > include/print.hpp <<EOF
 
 void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
-EOF   # end of file — конец файла,переход на новый строку
+EOF 
+# end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
@@ -108,7 +111,7 @@ EOF
 ```
 
 ```ShellSession
-$ edit README.md # Редактировать файл
+$ edit README.md # Редактируем файл README.md
 ```
 
 ```ShellSession
@@ -121,13 +124,13 @@ $ git push origin master # Залить все изменения ветки mas
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=03
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
-$ edit REPORT.md
+$ cd ~/workspace/labs/  # Переход в директорию /labs
+$ export LAB_NUMBER=03 # # Устанавливаем значение переменной окружения LAB_NUMBER
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Клонирование репозитория
+$ mkdir reports/lab${LAB_NUMBER} # Создаем каталог lab${LAB_NUMBER}
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем README.md в REPORT.md
+$ cd reports/lab${LAB_NUMBER} # Меняем директорию на reports/lab${LAB_NUMBER}
+$ edit REPORT.md # Редактируем файл REPORT.md
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
