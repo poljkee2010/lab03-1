@@ -132,7 +132,7 @@ $ mkdir reports/lab${LAB_NUMBER} # Создаем каталог lab${LAB_NUMBER
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем README.md в REPORT.md
 $ cd reports/lab${LAB_NUMBER} # Меняем директорию на reports/lab${LAB_NUMBER}
 $ edit REPORT.md # Редактируем файл REPORT.md
-$ gistup -m "lab${LAB_NUMBER}"
+$ gistup -m "lab${LAB_NUMBER}" #Создаем Gist из командной строки и комментарием 
 ```
 
 ## Links
