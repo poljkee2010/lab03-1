@@ -54,7 +54,8 @@ $ git log # История изменений
 $ mkdir sources # Создание директорий
 $ mkdir include
 $ mkdir examples
-$ cat > sources/print.cpp <<EOF # Запись в .cpp файл участка кода
+ # Запись в .cpp файл участка кода
+$ cat > sources/print.cpp <<EOF
 #include <print.hpp>
 
 void print(const std::string& text, std::ostream& out) {
@@ -64,11 +65,13 @@ void print(const std::string& text, std::ostream& out) {
 void print(const std::string& text, std::ofstream& out) {
   out << text;
 }
-EOF # end of file — конец файла,переход на новый строку
+EOF 
+# end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
-$ cat > include/print.hpp <<EOF # Запись в .cpp файл участка кода
+# Запись в .cpp файл участка кода
+$ cat > include/print.hpp <<EOF 
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -79,17 +82,20 @@ EOF   # end of file — конец файла,переход на новый с�
 ```
 
 ```ShellSession
-$ cat > examples/example1.cpp <<EOF # Запись в .cpp файл участка кода
+# Запись в .cpp файл участка кода
+$ cat > examples/example1.cpp <<EOF 
 #include <print.hpp>
 
 int main(int argc, char** argv) {
   print("hello");
 }
-EOF # end of file — конец файла,переход на новый строку
+EOF 
+# end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
-$ cat > examples/example2.cpp <<EOF # Запись в .cpp файл участка кода
+# Запись в .cpp файл участка кода
+$ cat > examples/example2.cpp <<EOF 
 #include <fstream>
 #include <print.hpp>
 
@@ -97,7 +103,8 @@ int main(int argc, char** argv) {
   std::ofstream file("log.txt");
   print(std::string("hello"), file);
 }
-EOF # end of file — конец файла,переход на новый строку
+EOF 
+# end of file — конец файла,переход на новый строку
 ```
 
 ```ShellSession
